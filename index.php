@@ -1,7 +1,19 @@
 <!doctype html>
 <html lang="en">
+ 
 
 <head>
+  <?php
+    //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
+    //SE ESISTE NON FACCIO NULLA,ALTRIMENTI LO CREO
+    if (isset($_COOKIE["utenteloggato"])){
+        
+    }else{  
+        $loggato=-1;
+        setcookie("utenteloggato", $loggato, time() + 1800, "/");
+    }
+  ?>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -51,7 +63,7 @@
         <a class="p-2 text-muted" href="#">cr.info@gmail.com</a>
         <a class="p-2 text-muted" href="#">Trasporti</a>
         <a class="p-2 text-muted" href="#">Noleggio</a>
-        <a class="p-2 text-muted" href="#">Contatti</a>
+        <a class="p-2 text-muted" href="contatti.html">Contatti</a>
         <a class="p-2 text-muted" href="#">Preventivo</a>
       </nav>
     </div>
