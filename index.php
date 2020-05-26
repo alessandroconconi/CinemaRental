@@ -64,7 +64,7 @@
         <a class="p-2 text-muted" href="#">Trasporti</a>
         <a class="p-2 text-muted" href="#">Noleggio</a>
         <a class="p-2 text-muted" href="contatti.html">Contatti</a>
-        <a class="p-2 text-muted" href="#">Preventivo</a>
+        <a class="p-2 text-muted" href="preventivo.php">Preventivo</a>
       </nav>
     </div>
 
