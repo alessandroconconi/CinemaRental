@@ -3,7 +3,6 @@
  
 
 <head>
-<<<<<<< HEAD
 	<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
   <?php
     //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
@@ -15,14 +14,6 @@
 			header("Location: index_loggato.php");
 		}
 	}else{  
-=======
-  <?php
-    //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
-    //SE ESISTE NON FACCIO NULLA,ALTRIMENTI LO CREO
-    if (isset($_COOKIE["utenteloggato"])){
-        
-    }else{  
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
         $loggato=-1;
         setcookie("utenteloggato", $loggato, time() + 1800, "/");
     }
@@ -53,11 +44,7 @@
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-4 pt-1">
-<<<<<<< HEAD
           <a class="text-muted" href="contatti.html">+39 3334675021 </a>
-=======
-          <a class="text-muted" href="#">+39 3939393939 </a>
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
         </div>
         <div class="col-4 text-center">
           <a class="blog-header-logo text-dark" href="#">Cinema Rental</a>
@@ -78,13 +65,7 @@
 
     <div class="nav-scroller py-1 mb-2">
       <nav class="nav d-flex justify-content-between">
-<<<<<<< HEAD
         <a class="p-2 text-muted" href="Prodotti.php">Noleggio</a>
-=======
-        <a class="p-2 text-muted" href="#">cr.info@gmail.com</a>
-        <a class="p-2 text-muted" href="#">Trasporti</a>
-        <a class="p-2 text-muted" href="#">Noleggio</a>
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
         <a class="p-2 text-muted" href="contatti.html">Contatti</a>
         <a class="p-2 text-muted" href="preventivo.php">Preventivo</a>
       </nav>
@@ -163,36 +144,17 @@
             <a href="#">+39 42345532</a>
             <p>lun-sab 8:30-22:00 domenica 12:00-18:00</p>
           </div>
-<<<<<<< HEAD
-=======
-          <img
-            src="https://aleconco.s3-eu-west-1.amazonaws.com/286c1f0786f22f49796739d023ce5417.png"
-            width="300" height="250">
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
         </div>
       </div>
     </div>
-  </div>
-
-  <main role="main" class="container">
-    <div class="row">
-      <div class="col-md-8 blog-main">
-      </div><!-- /.blog-main -->
-
-      <aside class="col-md-4 blog-sidebar">
-        <div class="p-3 mb-3 bg-light rounded">
-          <h4 class="font-italic">Service</h4>
-          <p class="mb-0">Cinema Rental <em>leader nel noleggio attrezzatura</em> offriamo un servizio completo su tutto
-            il territorio italiano.</p>
-        </div>
-
-<<<<<<< HEAD
-		<div id="demoMap" class="box">
+  
+  <h3>vieni a trovarci in negozio</h3>
+  <div id="demoMap" style="height:35vh;" class="box">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
       <script>
-          let lat = 45.5257;
-          let lon = 10.2283;
-          let zoom = 5;
+          let lat = 45.5138157;
+          let lon = 12.2711285;
+          let zoom = 12;
 
           let fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
           let toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
@@ -201,35 +163,14 @@
           let mapnik = new OpenLayers.Layer.OSM();
           map.addLayer(mapnik);
           map.setCenter(position, zoom);
-          let markers;
-          position = navigator.geolocation.getCurrentPosition(function(posit){
-            position = new OpenLayers.LonLat(posit.coords.longitude || lon, posit.coords.latitude || lat).transform(fromProjection, toProjection);
-            let markers = new OpenLayers.Layer.Markers("Markers");
-            map.addLayer(markers);
-            markers.addMarker(new OpenLayers.Marker(position));
-            map.setCenter(position, zoom);
-          })
+          let markers = new OpenLayers.Layer.Markers("Markers");
+          map.addLayer(markers);
+          markers.addMarker(new OpenLayers.Marker(position));
       </script>
 	</div>
-=======
 
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
-        <!--
-               <div class="p-3">
-            <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </aside><!-- /.blog-sidebar -->
-
-
-
-    </div><!-- /.row -->
-<<<<<<< HEAD
-	
+  <main role="main" class="container">
+    
 	<footer class="blog-footer">
     <p>
       <a href="#">torna su</a>
@@ -243,16 +184,6 @@
 	
   </main><!-- /.container -->
 	
-=======
-
-  </main><!-- /.container -->
-
-  <footer class="blog-footer">
-    <p>
-      <a href="#">torna su</a>
-    </p>
-  </footer>
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -280,11 +211,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-<<<<<<< HEAD
 	
 	<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js%22%3E</script>
-=======
->>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
 </body>
 
 </html>
