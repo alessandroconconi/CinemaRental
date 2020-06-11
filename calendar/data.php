@@ -22,7 +22,10 @@
 
 	$sqlprodottoupdate="UPDATE prodotti SET Disponibilità=0 WHERE id=".$_GET["id"]."";
 	$queryupdatepr=mysqli_query($con,$sqlprodottoupdate);
+<<<<<<< HEAD
 	
 	echo "<a href=../index_loggato.php>torna alla home page</a>";
+=======
+>>>>>>> bc9e473a35018a79c15f3d284d7371166c6be37d
 ?>
 <html>
