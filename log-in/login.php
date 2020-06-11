@@ -12,11 +12,13 @@ $pass=md5($pass);
 $sql="SELECT * FROM utenti WHERE Username='".$username."' AND Password='".$pass."' ";
 $result=mysqli_query($con,$sql);
 $n=mysqli_num_rows($result);
+$record=mysqli_fetch_assoc($result);
 
 if($n!=0){
   header("Location: ../index.php");
   //AGGIORNO IL COOKIE IN MODO DA SEGNALARE L'AVVENUTO LOGIN 
   setcookie("utenteloggato",1, time() + 1800, "/");
+  setcookie("utente",$record["id"],time()+(1800),"/");
 }else{
 	echo "Login non effettuato !" ;
 }

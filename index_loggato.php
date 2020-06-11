@@ -3,20 +3,18 @@
  
 
 <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
   <?php
-    //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
-    //SE ESISTE NON FACCIO NULLA,ALTRIMENTI LO CREO
-    if (isset($_COOKIE["utenteloggato"]) && $_COOKIE["utenteloggato"]==1){
-         if($_COOKIE["utente"]==15){
-			header("Location: index_admin.html ");
-		}else{
-			header("Location: index_loggato.php");
-		}
-	}else{  
-        $loggato=-1;
-        setcookie("utenteloggato", $loggato, time() + 1800, "/");
-    }
+     $con=mysqli_connect("localhost","root","","cinema_rental");
+     // Check connection
+     if (mysqli_connect_errno())
+     {
+     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+     }
+     mysqli_set_charset($con,"utf8");
+ 
+     $sql="SELECT * FROM utenti WHERE id=".$_COOKIE["utente"]."";
+     $query=mysqli_query($con,$sql);
+     $record=mysqli_fetch_array($query);
   ?>
 
   <meta charset="utf-8">
@@ -57,8 +55,8 @@
               <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
             </svg>
           </a>
-          <a class="btn btn-sm btn-outline-secondary" href="sign-in/index.html">Sign-up</a>
-          <a class="btn btn-sm btn-outline-secondary" href="log-in/index.html">log-in</a>
+         
+          <a class="btn btn-sm btn-outline-secondary" href="user.php">ciao <?php echo $record["Username"] ?></a>
         </div>
       </div>
     </header>
@@ -144,6 +142,9 @@
             <a href="#">+39 42345532</a>
             <p>lun-sab 8:30-22:00 domenica 12:00-18:00</p>
           </div>
+          <img
+            src="https://aleconco.s3-eu-west-1.amazonaws.com/286c1f0786f22f49796739d023ce5417.png"
+            width="300" height="250">
         </div>
       </div>
     </div>
@@ -161,30 +162,7 @@
             il territorio italiano.</p>
         </div>
 
-		<div id="demoMap" class="box">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
-      <script>
-          let lat = 45.5257;
-          let lon = 10.2283;
-          let zoom = 5;
 
-          let fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-          let toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-          let position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
-          map = new OpenLayers.Map("demoMap");
-          let mapnik = new OpenLayers.Layer.OSM();
-          map.addLayer(mapnik);
-          map.setCenter(position, zoom);
-          let markers;
-          position = navigator.geolocation.getCurrentPosition(function(posit){
-            position = new OpenLayers.LonLat(posit.coords.longitude || lon, posit.coords.latitude || lat).transform(fromProjection, toProjection);
-            let markers = new OpenLayers.Layer.Markers("Markers");
-            map.addLayer(markers);
-            markers.addMarker(new OpenLayers.Marker(position));
-            map.setCenter(position, zoom);
-          })
-      </script>
-	</div>
         <!--
                <div class="p-3">
             <h4 class="font-italic">Elsewhere</h4>
@@ -199,20 +177,14 @@
 
 
     </div><!-- /.row -->
-	
-	<footer class="blog-footer">
+
+  </main><!-- /.container -->
+
+  <footer class="blog-footer">
     <p>
       <a href="#">torna su</a>
     </p>
-	
-	
-	
   </footer>
-	
-	
-	
-  </main><!-- /.container -->
-	
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -240,8 +212,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-	
-	<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js%22%3E</script>
 </body>
 
 </html>

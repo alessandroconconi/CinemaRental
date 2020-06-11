@@ -4,20 +4,6 @@
 
 <head>
 	<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
-  <?php
-    //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
-    //SE ESISTE NON FACCIO NULLA,ALTRIMENTI LO CREO
-    if (isset($_COOKIE["utenteloggato"]) && $_COOKIE["utenteloggato"]==1){
-         if($_COOKIE["utente"]==15){
-			header("Location: index_admin.html ");
-		}else{
-			header("Location: index_loggato.php");
-		}
-	}else{  
-        $loggato=-1;
-        setcookie("utenteloggato", $loggato, time() + 1800, "/");
-    }
-  ?>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -57,8 +43,7 @@
               <line x1="21" y1="21" x2="15.8" y2="15.8"></line>
             </svg>
           </a>
-          <a class="btn btn-sm btn-outline-secondary" href="sign-in/index.html">Sign-up</a>
-          <a class="btn btn-sm btn-outline-secondary" href="log-in/index.html">log-in</a>
+          <a class="btn btn-sm btn-outline-secondary" href="admin_menu.html">Admin</a>
         </div>
       </div>
     </header>
@@ -161,30 +146,7 @@
             il territorio italiano.</p>
         </div>
 
-		<div id="demoMap" class="box">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
-      <script>
-          let lat = 45.5257;
-          let lon = 10.2283;
-          let zoom = 5;
 
-          let fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-          let toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-          let position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
-          map = new OpenLayers.Map("demoMap");
-          let mapnik = new OpenLayers.Layer.OSM();
-          map.addLayer(mapnik);
-          map.setCenter(position, zoom);
-          let markers;
-          position = navigator.geolocation.getCurrentPosition(function(posit){
-            position = new OpenLayers.LonLat(posit.coords.longitude || lon, posit.coords.latitude || lat).transform(fromProjection, toProjection);
-            let markers = new OpenLayers.Layer.Markers("Markers");
-            map.addLayer(markers);
-            markers.addMarker(new OpenLayers.Marker(position));
-            map.setCenter(position, zoom);
-          })
-      </script>
-	</div>
         <!--
                <div class="p-3">
             <h4 class="font-italic">Elsewhere</h4>
@@ -204,15 +166,50 @@
     <p>
       <a href="#">torna su</a>
     </p>
-	
-	
-	
   </footer>
 	
+	<div id="DivMappa"></div>
 	
-	
+	<script src="http://www.openlayers.org/api/OpenLayers.js%22%3E</script>
+    <script>
+
+      // Definisco la variabilie mappa come un oggetto OpenLayers.Map utilizzando il DivMappa, poi aggiungo il Layer OSM (Open Street Map)
+      var Mappa = new OpenLayers.Map("DivMappa");
+      Mappa.addLayer(new OpenLayers.Layer.OSM());
+
+      // Creo l'oggetto contenente le coordinate (prima longitudine e poi latitudine)
+      var LonLat = new OpenLayers.LonLat( 12.492347,  41.890183 ) 
+            .transform(
+              new OpenLayers.Projection("EPSG:4326"), // Transformazione da WGS 1984..
+              Mappa.getProjectionObject() // .. a Spherical Mercator Projection
+            );
+
+      // Imposto lo zoom
+      var zoom=16; 
+
+      // Creo una variabile contenete il layer dei marker poi collego il layer dei markers alla mappa
+      var LayerMarkers = new OpenLayers.Layer.Markers( "Markers" );
+      Mappa.addLayer(LayerMarkers);
+
+      // Aggiungo al layer dei marker un marker (utilizzando l'oggetto lonLat per le coordinate)
+      LayerMarkers.addMarker(new OpenLayers.Marker(LonLat)); 
+
+      // Imposto le coordinate di lonLat come centro della mappa di partenza
+      Mappa.setCenter (LonLat, zoom); 
+    </script>
+	 
+	  
+	  
   </main><!-- /.container -->
 	
+	
+
+	
+  <footer class="blog-footer">
+    <p>
+      <a href="#">torna su</a>
+    </p>
+  </footer>
 
   <!-- Bootstrap core JavaScript
     ================================================== -->

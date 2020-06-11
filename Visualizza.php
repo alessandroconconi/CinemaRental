@@ -10,9 +10,12 @@
   //IMPOSTAZIONE DEL CHARSET ALTRIMENTI DIO MALEDETTO NON VEDE GLI ACCENTI 
   mysqli_set_charset($con,"utf8");
   $sql="SELECT * FROM Prodotti WHERE Id=".$_GET["id"]."";
+  $sql2="SELECT * FROM Utenti WHERE id=".$_COOKIE["utente"]."";
   $query=mysqli_query($con,$sql);
+  $query2=mysqli_query($con,$sql2);
   //ARRAY ASSOCIATIVO PER LA STAMPA DEL CONTENUTO DEL RECORD
   $record=mysqli_fetch_assoc($query);
+  $record2=mysqli_fetch_assoc($query2);
   //CONTROLLO IL VALORE DEL COOKIE, SE COINCIDE CON 1 L'UTENTE È LOGGATO ALTRIMENTI STAMPO LA STESSA PAGINA CON UN MESSAGGIO DI INVITO AL LOGIN
   if ($_COOKIE["utenteloggato"]==1){
     echo "<form action=./calendar/noleggia.html method=GET>";
@@ -20,7 +23,7 @@
     echo "<h1>".$record["Marca"]." ".$record["Modello"]." ".$record["Prezzo"]."</h1><br>";
     echo "<h1>".$record["Prezzo"]." al giorno</h1><br>";
     echo "<h2>".$record["Descrizione"]."</h2>";
-    echo "Ciao utente numero ".$_COOKIE["utente"]." Vuoi noleggiare?";
+    echo "Ciao ".$record2["Username"]." Vuoi noleggiare?";
     //VERIFICO LA DISPONIBILITÀ DEL PRODOTTO NEL DATABASE, DOVE 0=NON DISPONIBILE E 1=DISPONIBILE
     if ($record["Disponibilità"]==1){
       echo "<input type=hidden value=".$_GET["id"]." name=id >";

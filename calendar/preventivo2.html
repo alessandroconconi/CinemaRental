@@ -46,8 +46,8 @@
                 start=range.start;
                 var url_string = window.location.href;
 	            var url = new URL(url_string);
-	            var id = url.searchParams.get("id");
-				window.location.assign("/conferma.php?id="+id+"&start="+range.start+"&end="+range.end+"");
+	            var id = url.searchParams.get("prodotto");
+				window.location.assign("preventivo3.php?id="+id+"&start="+range.start+"&end="+range.end+"" );
              })
 			
              
