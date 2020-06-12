@@ -1,7 +1,7 @@
 <html>
 <head> 
 <link href="progetto.css" rel="stylesheet" type="text/css">
-<h2>Elimina un prodotto presente</h2>
+<h2>ELIMINA UN PRODOTTO</h2>
 </head>
 <?php
 $con=mysqli_connect("eu-cdbr-west-03.cleardb.net","b9122e4bb6f324","af8dc60b","heroku_2486b3b7e521673");
