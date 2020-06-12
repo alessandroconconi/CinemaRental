@@ -1,6 +1,7 @@
 <html>
     <head>
     <link href="progetto.css" rel="stylesheet" type="text/css">
+    <h2>Visualizza i prodotti</h2>
     </head>
     <?php
    
