@@ -148,7 +148,7 @@
         </div>
       </div>
     </div>
-  </div>
+  
 
   <h5><i>Vieni a trovarci in negozio</i></h5>
   <div id="demoMap" style="height:35vh;" class="box">
