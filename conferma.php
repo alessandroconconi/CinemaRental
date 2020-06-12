@@ -37,12 +37,14 @@
 </head>
 <body>
 <div>
+   
+    <br> <h2>RIEPILOGO DELL'ORDINE</h2><br><br>
     <ul>
-    <li>da: <?php echo $start ?> </li>
-    <li>a: <?php echo $end ?> </li>
-    <li>Oggetto: <?php echo "{$prodotto['Marca']} | {$prodotto['Modello']}" ?> </li>
-    <li>Descrizione Oggetto: <?php echo $prodotto['Descrizione'] ?> </li>
-    <li>Prezzo Totale: <?php echo $totale ?> </li>   
+    <li><i>da: <?php echo $start ?> </i></li><br>
+    <li><i>a: <?php echo $end ?> </i></li><br>
+    <li><i>Oggetto: <?php echo "{$prodotto['Marca']} | {$prodotto['Modello']}" ?> </i></li><br>
+    <li><i>Descrizione Oggetto: <?php echo $prodotto['Descrizione'] ?> </i></li><br>
+    <li><i>Prezzo Totale: <?php echo $totale ?> </i></li><br>   
     </ul>
 </div>    
     <form action="acquisto.php" method="post">

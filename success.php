@@ -27,8 +27,8 @@
             $prodotto=$row;
           }
         }
-    
-    echo "{$utente['Username']}, hai acquistato correttamente il prodotto : {$prodotto['Marca']} {$prodotto['Modello']}";
+    echo "<br><br><p><h1><b>DETTAGLI ORDINE</h1></b></p>";
+    echo "<br><br>{$utente['Username']}, <br><br>Hai acquistato correttamente il prodotto  : {$prodotto['Marca']} {$prodotto['Modello']}";
     echo "<br>";
-    echo "<a href='/index.php'>torna alla home page</a>";
+    echo "<a href='/index.php'><br><br>Home page</a>";
 ?>

@@ -45,7 +45,7 @@
           <a class="text-muted" href="contatti.html">+39 3334675021 </a>
         </div>
         <div class="col-4 text-center">
-          <a class="blog-header-logo text-dark" href="#">Cinema Rental</a>
+          <a class="blog-header-logo text-dark" href="#">CINEMA RENTAL</a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
           <a class="text-muted" href="#">
@@ -120,10 +120,10 @@
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-primary">Shipping</strong>
             <h3 class="mb-0">
-              <a class="text-dark" href="#">Servizio a domicilio</a>
+              <p>Servizio a domicilio</p>
             </h3>
             <div class="mb-1 text-muted">7 giorni su 7</div>
-            <a href="#">richiedi il tuo preventivo</a>
+            <a href="preventivo.php">richiedi il tuo preventivo</a>
           </div>
           <img src="https://aleconco.s3-eu-west-1.amazonaws.com/unnamed.jpg" width="300"
             height="250">
@@ -132,15 +132,12 @@
       <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-success">about us</strong>
-            <h3 class="mb-0">
-              <a class="text-dark" href="#">Visit us</a>
-            </h3>
-            <div class="mb-1 text-muted">via verdi</div>
-            <a href="#">+39 72649823</a>
-            <div class="mb-1 text-muted">via rossi</div>
-            <a href="#">+39 42345532</a>
-            <p>lun-sab 8:30-22:00 domenica 12:00-18:00</p>
+            <strong class="d-inline-block mb-2 text-success">About us</strong>
+            <div class="mb-1 text-muted">via Ca' Solaro 25</div>
+            <a href="#">+39 3334675021</a>
+            
+            <p>lun-sab 8:30-22:00 <br>
+              domenica 12:00-18:00</p>
           </div>
           <img
             src="https://aleconco.s3-eu-west-1.amazonaws.com/286c1f0786f22f49796739d023ce5417.png"
@@ -150,31 +147,31 @@
     </div>
   </div>
 
+  <h5><i>Vieni a trovarci in negozio</i></h5>
+  <div id="demoMap" style="height:35vh;" class="box">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
+      <script>
+          let lat = 45.5138157;
+          let lon = 12.2711285;
+          let zoom = 12;
+
+          let fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+          let toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+          let position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+          map = new OpenLayers.Map("demoMap");
+          let mapnik = new OpenLayers.Layer.OSM();
+          map.addLayer(mapnik);
+          map.setCenter(position, zoom);
+          let markers = new OpenLayers.Layer.Markers("Markers");
+          map.addLayer(markers);
+          markers.addMarker(new OpenLayers.Marker(position));
+      </script>
+	</div>
+
   <main role="main" class="container">
     <div class="row">
       <div class="col-md-8 blog-main">
       </div><!-- /.blog-main -->
-
-      <aside class="col-md-4 blog-sidebar">
-        <div class="p-3 mb-3 bg-light rounded">
-          <h4 class="font-italic">Service</h4>
-          <p class="mb-0">Cinema Rental <em>leader nel noleggio attrezzatura</em> offriamo un servizio completo su tutto
-            il territorio italiano.</p>
-        </div>
-
-
-        <!--
-               <div class="p-3">
-            <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
-            </ol>
-          </div>
-        </aside><!-- /.blog-sidebar -->
-
-
 
     </div><!-- /.row -->
 

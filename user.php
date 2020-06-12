@@ -9,14 +9,17 @@
     $sql="SELECT * FROM utenti WHERE id=".$_COOKIE["utente"]."";
     $query=mysqli_query($con,$sql);
     $record=mysqli_fetch_array($query);
-    echo "<center><h1>Cinema Rental</h1><a href=index.php>homepage</a>";
-    echo "<h2>Dati Personali </h2><br>";
-    echo "Username ".$record["Username"]."<br><br>";
-    echo "Nome ".$record["Nome"]."<br><br>";
-    echo "Cognome ".$record["Cognome"]."<br><br>";
-    echo "Email ".$record["Email"]."<br><br>";
-    echo "Indirizzo ".$record["Indirizzo"]."<br><br>";
-    echo "Telefono ".$record["Telefono"]."<br><br>";
+
+    echo "<br><br><center><h1>CINEMA RENTAL</h1>";
+    echo "<br><br><h2>Dati Personali </h2><br>";
+    echo "<i>Username:</i> ".$record["Username"]."<br><br>";
+    echo "<i>Nome:</i> ".$record["Nome"]."<br><br>";
+    echo "<i>Cognome:</i> ".$record["Cognome"]."<br><br>";
+    echo "<i>Email:</i> ".$record["Email"]."<br><br>";
+    echo "<i>Indirizzo:</i> ".$record["Indirizzo"]."<br><br>";
+    echo "<i>Telefono:</i> ".$record["Telefono"]."<br><br>";
+
+    echo"<br><br><h5><a href=index.php>HOMEPAGE</a></h5>";
     echo "</center>";
     
 ?>

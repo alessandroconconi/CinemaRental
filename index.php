@@ -47,7 +47,7 @@
           <a class="text-muted" href="contatti.html">+39 3334675021 </a>
         </div>
         <div class="col-4 text-center">
-          <a class="blog-header-logo text-dark" href="#">Cinema Rental</a>
+          <a class="blog-header-logo text-dark" href="#">CINEMA RENTAL</a>
         </div>
         <div class="col-4 d-flex justify-content-end align-items-center">
           <a class="text-muted" href="#">
@@ -122,10 +122,10 @@
           <div class="card-body d-flex flex-column align-items-start">
             <strong class="d-inline-block mb-2 text-primary">Shipping</strong>
             <h3 class="mb-0">
-              <a class="text-dark" href="#">Servizio a domicilio</a>
+              <p>Servizio a domicilio</p>
             </h3>
             <div class="mb-1 text-muted">7 giorni su 7</div>
-            <a href="#">richiedi il tuo preventivo</a>
+            <a href="preventivo.php">richiedi il tuo preventivo</a>
           </div>
           <img src="https://aleconco.s3-eu-west-1.amazonaws.com/unnamed.jpg" width="300"
             height="250">
@@ -134,21 +134,19 @@
       <div class="col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
           <div class="card-body d-flex flex-column align-items-start">
-            <strong class="d-inline-block mb-2 text-success">about us</strong>
+            <strong class="d-inline-block mb-2 text-success">About us</strong>
             <h3 class="mb-0">
-              <a class="text-dark" href="#">Visit us</a>
             </h3>
-            <div class="mb-1 text-muted">via verdi</div>
-            <a href="#">+39 72649823</a>
-            <div class="mb-1 text-muted">via rossi</div>
-            <a href="#">+39 42345532</a>
-            <p>lun-sab 8:30-22:00 domenica 12:00-18:00</p>
+            <div class="mb-1 text-muted">via Ca' Solaro 25</div>
+            <strong><p>+39 3334675021</p></strong>
+            <p><i>Lun-Sab 8:30-18:00 <br>
+               Domenica 12:00-18:00</i></p>
           </div>
         </div>
       </div>
     </div>
   
-  <h3>vieni a trovarci in negozio</h3>
+  <h5><i>Vieni a trovarci in negozio</i></h5>
   <div id="demoMap" style="height:35vh;" class="box">
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/2.13.1/OpenLayers.js"></script>
       <script>

@@ -1,5 +1,8 @@
 <html>
 
+  <h1>PREVENTIVO</h1>
+  <h3>seleziona un prodotto tra quelli disponibili</h3>
+  
 <?php
 $con=mysqli_connect("localhost","root","","Cinema_Rental");
 // Check connection

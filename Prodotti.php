@@ -1,3 +1,10 @@
+<html>
+  <head>
+    <h2>Seleziona un prodotto da noleggiare</h2>
+    <link href="progetto.css" rel="stylesheet" type="text/css">
+  </head>
+
+  
 
 <?php
 $con=mysqli_connect("localhost","root","","Cinema_Rental");
@@ -20,3 +27,4 @@ foreach ($query as $riga){
 
 
 ?>
+</html>

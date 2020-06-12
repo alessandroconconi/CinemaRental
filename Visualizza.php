@@ -23,13 +23,13 @@
     echo "<h1>".$record["Marca"]." ".$record["Modello"]." ".$record["Prezzo"]."</h1><br>";
     echo "<h1>".$record["Prezzo"]." al giorno</h1><br>";
     echo "<h2>".$record["Descrizione"]."</h2>";
-    echo "Ciao ".$record2["Username"]." Vuoi noleggiare?";
+    echo "utente : ".$record2["Username"]."<br>Vuoi noleggiare il seguente prodotto?";
     //VERIFICO LA DISPONIBILITÀ DEL PRODOTTO NEL DATABASE, DOVE 0=NON DISPONIBILE E 1=DISPONIBILE
     if ($record["Disponibilità"]==1){
       echo "<input type=hidden value=".$_GET["id"]." name=id >";
       echo "<input type=submit >";
     }else{
-      echo "Prodotto non disponibile per il noleggio";
+      echo "<br>Prodotto non disponibile per il noleggio";
     }
     
     echo "</form>";

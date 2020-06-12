@@ -31,15 +31,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ConfermaPagamento</title>
 </head>
 <body>
 <main role="main">
       <div class="container">
         <div class="row pt-3">
           <div class="col">
-            <h5 class="mb-3">Clicca su Confirm per procedere al pagamento, altrimenti clicca indietro.</h5>
-            <button id="confirm" class="btn btn-success">Confirm</button>
+            <h5 class="mb-3">Clicca su Conferma per procedere al pagamento, altrimenti clicca indietro...</h5>
+            <button id="confirm" class="btn btn-success">Conferma</button>
             <a href="/index.php" class="btn btn-danger">Indietro</a>
             <script src="https://js.stripe.com/v3/"></script>
             <script>
