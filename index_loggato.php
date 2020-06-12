@@ -182,7 +182,7 @@
 
   <footer class="blog-footer">
     <p>
-      <a href="#">torna su</a>
+      <a href="#"><i>torna su<i></a>
     </p>
   </footer>
 
