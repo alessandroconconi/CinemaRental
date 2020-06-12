@@ -1,6 +1,6 @@
 <?php
     
-    $con=mysqli_connect("localhost","root","","Cinema_Rental");
+    $con=mysqli_connect("eu-cdbr-west-03.cleardb.net","b9122e4bb6f324","af8dc60b","heroku_2486b3b7e521673");
     // Check connection
     if (mysqli_connect_errno())
       {
@@ -31,6 +31,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conferma</title>

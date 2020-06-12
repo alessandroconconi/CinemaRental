@@ -1,4 +1,8 @@
-<?php
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+    </head>
+    <?php
    
    echo '<script type="text/javascript"> ';
     echo ' function openurl(newurl) {';
@@ -8,7 +12,7 @@
     echo '}';
     echo '</script>'; 
 
-$con=mysqli_connect("localhost","root","","cinema_rental");
+$con=mysqli_connect("eu-cdbr-west-03.cleardb.net","b9122e4bb6f324","af8dc60b","heroku_2486b3b7e521673");
 // Check connection
 if (mysqli_connect_errno())
 {
@@ -54,4 +58,5 @@ echo "</table>";
 echo "<center><a href=admin_menu.html><h2>Torna al menu</h2></a></center>";
 
 ?>
+</html>
 
