@@ -65,7 +65,7 @@
 
     <div class="nav-scroller py-1 mb-2">
       <nav class="nav d-flex justify-content-between">
-        <a class="p-2 text-muted" href="Prodotti.php">Noleggio</a>
+        <a class="p-2 text-muted" href="menu_prodotti.html">Noleggio</a>
         <a class="p-2 text-muted" href="contatti.html">Contatti</a>
         <a class="p-2 text-muted" href="preventivo.php">Preventivo</a>
       </nav>
