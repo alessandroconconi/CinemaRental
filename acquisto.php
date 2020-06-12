@@ -10,8 +10,8 @@
 
   // Session is an array wich includes the id for the checkout
   $session = \Stripe\Checkout\Session::create([
-    'success_url' => "http://localhost:8000/success.php?idProdotto=$idProdotto",
-    'cancel_url' => "http://localhost:8000/index.php",
+    'success_url' => "https://cinemarental.herokuapp.com//success.php?idProdotto=$idProdotto",
+    'cancel_url' => "https://cinemarental.herokuapp.com//index.php",
     'payment_method_types' => ['card'],
     'line_items' => [
       [
