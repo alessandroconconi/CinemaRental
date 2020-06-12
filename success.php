@@ -1,5 +1,5 @@
 <html>
-  <head><link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css"></head>
+  <head><link href="progetto.css" rel="stylesheet" type="text/css"></head>
 <?php
 
     $con=mysqli_connect("eu-cdbr-west-03.cleardb.net","b9122e4bb6f324","af8dc60b","heroku_2486b3b7e521673");

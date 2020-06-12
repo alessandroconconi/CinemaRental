@@ -1,5 +1,5 @@
 <html>
-<head><link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css"></head>
+<head><link href="progetto.css" rel="stylesheet" type="text/css"></head>
   <h1>PREVENTIVO</h1>
   <h3>seleziona un prodotto tra quelli disponibili</h3>
   

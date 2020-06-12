@@ -29,7 +29,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+<link href="progetto.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ConfermaPagamento</title>

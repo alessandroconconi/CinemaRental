@@ -1,5 +1,6 @@
 <html>
   <head>
+  <link href="progetto.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
   </head>
 <?php

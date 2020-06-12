@@ -3,7 +3,7 @@
  
 
 <head>
-	<link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
+<link href="progetto.css" rel="stylesheet" type="text/css">
   <?php
     //CONTROLLO TRAMITE IL METODO ISSET() SE IL COOKIE UTENTELOGGATO ESISTE GIA
     //SE ESISTE NON FACCIO NULLA,ALTRIMENTI LO CREO
