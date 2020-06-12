@@ -2,7 +2,6 @@
   <head>
   <link href="progetto.css" rel="stylesheet" type="text/css">
     <h2>Seleziona un prodotto da noleggiare</h2>
-    <link href="progetto.css" rel="stylesheet" type="text/css">
   </head>
 
   
@@ -19,8 +18,11 @@ $sql="SELECT * FROM Prodotti ";
 $query=mysqli_query($con,$sql);
 //STAMPA DEL CONTENUTO DELLA TABELLA PRODOTTI
 foreach ($query as $riga){
+  echo "<table border=1>";
+
   echo "<tr><td>";
-  echo "<img src=img/".$riga["Immagine"]." width=400 length=400/><br>"; //iMMAGINE
+  
+  echo "<th><img src=img/".$riga["Immagine"]." width=250 length=250/><br></th>"; //iMMAGINE
   echo "<a href=Visualizza.php?id=".$riga["id"].">".$riga["Marca"]." ".$riga["Modello"]."</a><br>"; //MARCA E MODELLO CHE PORTANO ALLA PAGINA DEL PRODOTTO (SI PUO SOSTITUIRE CON UN PULSANTE)
   echo "</td></tr>";
 }
