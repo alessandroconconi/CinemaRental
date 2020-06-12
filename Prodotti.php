@@ -22,7 +22,7 @@ foreach ($query as $riga){
 
   echo "<tr><td>";
   
-  echo "<th><img src=img/".$riga["Immagine"]." width=250 length=250/><br></th>"; //iMMAGINE
+  echo "<br><th><img src=img/".$riga["Immagine"]." width=250 length=250/><br></th>"; //iMMAGINE
   echo "<a href=Visualizza.php?id=".$riga["id"].">".$riga["Marca"]." ".$riga["Modello"]."</a><br>"; //MARCA E MODELLO CHE PORTANO ALLA PAGINA DEL PRODOTTO (SI PUO SOSTITUIRE CON UN PULSANTE)
   echo "</td></tr>";
 }
