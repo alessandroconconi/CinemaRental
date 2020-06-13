@@ -73,7 +73,7 @@
 
     <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark align-items-center">
       <div class="container-fluid">
-        <img src="https://aleconco.s3-eu-west-1.amazonaws.com/arri-alexa-mini.jpg"
+        <img src="https://aleconco.s3-eu-west-1.amazonaws.com/studio1-1.jpg"
           width="300" height="175">
         <div class="row" style="float: right;">
           <form class="form-inline">
