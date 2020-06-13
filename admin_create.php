@@ -1,7 +1,7 @@
 <html>
   <head>
   <link href="progetto.css" rel="stylesheet" type="text/css">
-  <p>Inserisci un nuovo prodotto</p>
+  
   </head>
   <?php
 $marca=$_POST["marca"];

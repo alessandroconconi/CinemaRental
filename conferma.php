@@ -60,4 +60,10 @@
 
     </form>
 </body>
+
+<?php
+  setcookie("start",$start,time()+1800,"/");
+  setcookie("end",$end,time()+1800,"/");
+?>
+
 </html>
