@@ -1,7 +1,26 @@
 <html>
 <head>
 <link href="progetto.css" rel="stylesheet" type="text/css">
-</head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title> preventivo3 </title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+    <link href="progetto.css" rel="stylesheet">
+
+<br><br>
 <?php
 $con=mysqli_connect("eu-cdbr-west-03.cleardb.net","b9122e4bb6f324","af8dc60b","heroku_2486b3b7e521673");
 // Check connection
@@ -100,9 +119,10 @@ $record=mysqli_fetch_assoc($query);
 
 $costo=(int)$record["Prezzo"]*$giorni;
 
-echo "Il noleggio di ".$record["Marca"]." ".$record["Modello"]." per ".$giorni." giorni al prezzo giornaliero di ".$record["Prezzo"]."<br>";
-echo "verrebbe a costare : ".$costo." euro.";
-echo "Visualizza prodotto: <a href=../Visualizza.php?id=".$idprodotto.">Link</a><br>";
+echo "<center>Il noleggio di ".$record["Marca"]." ".$record["Modello"]." per ".$giorni." giorni al prezzo giornaliero di ".$record["Prezzo"]."</center><br>";
+echo "<center>verrebbe a costare: ".$costo." euro.</center><br>";
+echo "<center>Visualizza prodotto: <a href=../Visualizza.php?id=".$idprodotto.">Vai</a></center><br>";
+
 ?>
 
 

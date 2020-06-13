@@ -1,6 +1,6 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
-body {background: rgb(148, 194, 214);}
+body {background: rgb(177, 209, 223);}
 p {color: rgb(92, 30, 30);}
 
 .blog-header {
@@ -17,9 +17,16 @@ p {color: rgb(92, 30, 30);}
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3{
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
   font-style : italic;
+  font-size: 30px;
+}
+
+h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-style : italic;
+  font-size: 20px;
 }
 
 .display-4 {
