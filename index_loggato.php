@@ -143,7 +143,7 @@
               domenica 12:00-18:00</p>
           </div>
           <img
-            src="https://aleconco.s3-eu-west-1.amazonaws.com/286c1f0786f22f49796739d023ce5417.png"
+            src="https://aleconco.s3-eu-west-1.amazonaws.com/studio1-1.jpg"
             width="300" height="250">
         </div>
       </div>

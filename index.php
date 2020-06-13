@@ -127,7 +127,7 @@
             <div class="mb-1 text-muted">7 giorni su 7</div>
             <a href="preventivo.php">richiedi il tuo preventivo</a>
           </div>
-          <img src="https://aleconco.s3-eu-west-1.amazonaws.com/studio1-1.jpg" width="300"
+          <img src="https://aleconco.s3-eu-west-1.amazonaws.com/unnamed.jpg" width="300"
             height="250">
         </div>
       </div>
@@ -142,6 +142,9 @@
             <p><i>Lun-Sab 8:30-18:00 <br>
                Domenica 12:00-18:00</i></p>
           </div>
+          <img
+            src="https://aleconco.s3-eu-west-1.amazonaws.com/studio1-1.jpg"
+            width="300" height="250">
         </div>
       </div>
     </div>
