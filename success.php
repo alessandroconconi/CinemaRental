@@ -34,8 +34,7 @@
     echo "<br>";
     echo "<a href='/index.php'><br><br>Home page</a>";
 
-    $sqlordine="INSERT INTO 'ordini' ('Marca','Modello','id_utente','data_inizio','data_fine') VALUES ('".$prodotto["Marca"]."','".$prodotto["Modello"]."','".$_COOKIE["utente"]."','".$_COOKIE["start"]."','".$_COOKIE["end"]."')";
-    echo $sqlordine;
+    $sqlordine="INSERT INTO ordini (Marca,Modello,id_utente,data_inizio,data_fine) VALUES ('".$prodotto["Marca"]."','".$prodotto["Modello"]."','".$_COOKIE["utente"]."','".$_COOKIE["start"]."','".$_COOKIE["end"]."')";
     $queryinsertordine=mysqli_query($con,$sqlordine);
     
 
